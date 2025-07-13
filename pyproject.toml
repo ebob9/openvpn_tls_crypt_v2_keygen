@@ -1,0 +1,39 @@
+[project]
+name = "ovpn-tls-crypt-v2-generator"
+dynamic = ["version"]
+description = "Text Blob and Object Dumper"
+requires-python = ">= 3.11"
+authors = [
+    {name = "Aaron Edwards", email = "openvpn_tls_crypt_v2_keygen@ebob9.com"},
+]
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "pycryptodome"
+]
+license = {text = "MIT"}
+requires-python = ">=3.11"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+gen_ovpn_keys = "ovpn_tls_crypt_v2_generator:main"
+
+[project.urls]
+Homepage = "https://github.com/ebob9/openvpn_tls_crypt_v2_keygen"
+
+[tool.setuptools.dynamic]
+version = {attr = "ovpn_tls_crypt_v2_generator.__version__"}
